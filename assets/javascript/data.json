@@ -1,0 +1,61 @@
+{
+    "home": {
+        "foods": {
+
+            "nuts": {
+                "cashews": "cashews",
+                "almonds": "almonds",
+                "hazelnuts": "hazelnuts",
+                "brazilnuts": "brazilnuts",
+                "peanutbutter": "peanutbutter",
+                "pumpkinseeds": "pumpkinseeds",
+                "walnuts": "walnuts"
+            },
+            "meats": {
+                "leanpork": "leanpork",
+                "leanbeef": "leanbeef",
+                "chicken": "chicken",
+                "turkey": "turkey",
+                "salmon": "salmon",
+                "eggs": "eggs",
+                "tuna": "tuna"
+            },
+            "vegetables": {
+                "leafygreens": "leafygreens",
+                "spinach": "spinach",
+                "romaine": "romaine",
+                "sweetpotato": "sweetpotato",
+                "edamame": "edamame",
+                "asparagus": "asparagus"
+            },
+            "grains": {
+                "oatmeal": "oatmeal",
+                "popcorn": "popcorn",
+                "brownrice": "brownrice",
+                "beans": "beans",
+                "legumes": "legumes",
+                "wholegraincereal": "wholegraincereal",
+                "quinoa": "quinoa"
+            },
+            "fruits": {
+                "bananas": "bananas",
+                "apples": "apples",
+                "oranges": "oranges",
+                "blueberries": "blueberries",
+                "melons": "melons"
+            },
+            "quickFixes": {
+                "caffeine": "caffeine",
+                "sugar": "sugar",
+                "coffee": "coffee",
+                "tea": "tea",
+                "chocolate": "chocolate",
+                "honey": "honey"
+            },
+            "dairy": {
+                "yogurt": "yogurt",
+                "cheese": "cheese"
+            }
+        }
+    }
+}
