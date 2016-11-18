@@ -7,6 +7,7 @@
     <title>Material UI One Page Theme</title>
 
     <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
     <link href="min/custom-min.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="css/t2-localstyle.css">
@@ -21,25 +22,31 @@
     <div class="loader-section section-right"></div>
  
 </div>
+<!-- cards for user choice -->
 
-<div class="choose">
     <div class="container">
+    <div class="row"></div>
         <div class="row">
-            <div class="col s5 pull-s6 choice">
-                <span style="text-align: center;" class="flow-text">Would you like to make your own food?</span>
-                <br>
-                <a class="waves-effect waves-light btn"><i class="material-icons left"></i>Recipes</a>
+            <div class="col s5 pull-s6">
+            <!-- Option one to display user choice -->
+                <div class="card medium pink darken-2">
+                    <div class="card-content"><h2>DIY</h2></div>
+                    <br>
+                    <div class="card action">
+                    <button class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons left">kitchen</i></button>
+                    </div>
+                </div>
             </div>
             <div class="col s2"><br></div>
-
+            <!-- Option two to display user choice -->
             <div class="col s5 push-s6 choice">
-                <span style="text-align: right;" class="flow-text">Would you like to order your food?</span>
+                <span class="flow-text"><h2>Ready Made</h2></span>
                 <br>
-                <a class="waves-effect waves-light btn"><i class="material-icons left"></i>Places</a>
+                <a class="waves-effect waves-light btn"><i class="material-icons left">restaurant</i></a>
             </div>
         </div>
     </div>
-</div>
+
 
 
 
