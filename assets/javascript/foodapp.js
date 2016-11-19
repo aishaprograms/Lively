@@ -21,9 +21,3 @@ var foods = {
     ],
     dairy: ['yogurt', 'cheese']
 };
-
-Object.keys(foods).forEach(function(food) {
-    foods[food].forEach(function(item) {
-        foodObjects.push(new FoodObj(item.name, item.img, item.info));
-    });
-});
