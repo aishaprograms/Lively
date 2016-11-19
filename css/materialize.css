@@ -7728,7 +7728,7 @@ input[type=range]:focus::-ms-fill-upper {
 .carousel.carousel-slider {
   top: 0;
   left: 0;
-  height: 0;
+  height: 0; /*adjusted this height to increase carousel slide height*/
 }
 
 .carousel.carousel-slider .carousel-fixed-item {
@@ -7765,7 +7765,7 @@ input[type=range]:focus::-ms-fill-upper {
 .carousel .carousel-item {
   display: none;
   width: 200px;
-  height: 400px;
+  height: 400px; 
   position: absolute;
   top: 0;
   left: 0;
