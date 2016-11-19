@@ -1,8 +1,8 @@
 .choice {
-	border-style: solid;
+	
 	border-width: 1px;
 	box-shadow: 0 4px 8px 0px rgba(0, 0, 0, .19);
-	margin-top: 154px;
+	margin-top: 120px;
 	padding: 30px;
 	text-align: center;
 }
