@@ -1,0 +1,161 @@
+{
+    "home": {
+        "foods": {
+
+            "nuts": {
+                "cashews": {
+                    "name": "Cashews",
+                    "info": "Cashews contain protein and magnesium. The protein provides you energy for extended periods of time and magnesium plays a key role in sugar’s conversion to energy. Eating a handful of cashews can also reduce depression.",
+                    "img": "../images/cashews.jpg"
+                },
+                "almonds": {
+                    "name": "Almonds",
+                    "info": "Almonds contain magnesium and vitamin B, which you need to prevent fatigue, irritability, and poor concentration. Grab a handful of almonds as a serving.",
+                    "img": "../images/almonds.jpg"
+                },
+                "hazelnuts": {
+                    "name": "Hazelnuts",
+                    "info": "Hazelnuts contain protein and magnesium. The protein provides you energy for extended periods of time and magnesium plays a key role in sugar’s conversion to energy. If your go-to form of hazelnuts is in a chocolatey spread, instead opt for a reduced sugar chocolate hazelnut spread, which contains all-natural ingredients.",
+                    "img": "../images/hazelnuts.jpg"
+                },
+                "peanutbutter": {
+                    "name": "Peanut Butter",
+                    "info": "Peanut butter contains healthy fats, protein, and fiber; it keeps hunger levels at bay and blood-sugar levels stable. Your peanut butter should contain one ingredient: peanuts (and sometimes salt). Stick to a two-tablespoon serving to keep the calories under control.",
+                    "img": "../images/peanutbutter.jpg"
+                },
+                "pumpkinseeds": {
+                    "name": "Pumpkin Seeds",
+                    "info": "Pumpkin seeds contain magnesium and vitamin B, which you need to prevent fatigue, irritability, and poor concentration. Grab a handful of pumpkin seeds as a serving.",
+                    "img": "../images/pumpkinseeds.jpg"
+                }
+            },
+            "meats": {
+                "leanbeef": {
+                    "name": "Lean Beef",
+                    "info": "Lean beef contains tyrosine, an amino acid that boosts dopamine and norepinephrine. Boosting these brain chemicals leads to greater alertness and focus.",
+                    "img": "../images/leanbeef.jpg"
+                },
+                "chicken": {
+                    "name": "Chicken",
+                    "info": "Chicken contains tyrosine, an amino acid that boosts dopamine and norepinephrine. Boosting these brain chemicals leads to greater alertness and focus.",
+                    "img": "../images/chicken.jpg"
+                },
+                "salmon": {
+                    "name": "Salmon",
+                    "info": "Salmon contains omega-3 fatty acids; these healthy fats improve memory, reduce depression, help lower blood pressure and bad cholesterol. It’s brain food AND heart-healthy food. ",
+                    "img": "../images/salmon.jpg"
+                },
+                "eggs": {
+                    "name": "Eggs",
+                    "info": "Eggs are one of the best foods to get the protein and amino acids you need for healthy body function. Eggs can be served any way, boiled, scrambled, or fried, during any meal in the day.",
+                    "img": "../images/eggs.jpg"
+                }
+            },
+            "vegetables": {
+                "spinach": {
+                    "name": "Spinach",
+                    "info": "Leafy greens contain folate which lowers the risk of depressive symptoms such as fatigue and lack of interest.",
+                    "img": "../images/spinach.jpg"
+                },
+                "romaine": {
+                    "name": "Romaine Lettuce",
+                    "info": "Leafy greens contain folate which lowers the risk of depressive symptoms such as fatigue and lack of interest.",
+                    "img": "../images/romainelettuce.jpg"
+                },
+                "sweetpotato": {
+                    "name": "Sweet Potato",
+                    "info": "Sweet potatoes contain healthy carbohydrates, vitamin A, and vitamin C. These three powerfully battle fatigue and improve alertness. Prepare them as you would regular potatoes or use them in a dessert for a healthy sweet treat.",
+                    "img": "../images/sweetpotato.jpg"
+                },
+                "edamame": {
+                    "name": "Edamame",
+                    "info": "Edamame or soybeans are high in B-vitamins, which are essential nutrients to convert food to energy. Edamame also contains carbs, fiber, and protein, making it the perfect snack for the fitness-conscious individual.",
+                    "img": "../images/edamame.jpg"
+                }
+            },
+            "grains": {
+                "oatmeal": {
+                    "name": "Oatmeal",
+                    "info": "Oatmeal has high levels of fiber, which prevent the crash that comes with eating simple sugars. It’s a breakfast sure to keep you satiated and energized all morning. ",
+                    "img": "../images/oatmeal.jpg"
+                },
+                "popcorn": {
+                    "name": "Popcorn",
+                    "info": "Popcorn is a whole-grain carbohydrate and contains fiber, which prevents the crash that comes with eating simple sugars. Avoid the microwave stuff, and instead opt for air-popped popcorn.",
+                    "img": "../images/popcorn.jpg"
+                },
+                "beans": {
+                    "name": "Beans",
+                    "info": "Beans are a high fiber high protein food, which keep energy levels stable throughout the day.",
+                    "img": "../images/beans.jpg"
+                },
+                "wholegraincereal": {
+                    "name": "Whole Grain Cereal",
+                    "info": "Sugary cereal causes your blood sugar to go up and back down really quick, which can lead to more fatigue and even moodiness. Whole grain carbohydrates are absorbed more slowly, which keep your energy levels elevated and stable.",
+                    "img": "../images/wholegraincereal.jpg"
+                },
+                "quinoa": {
+                    "name": "Quinoa",
+                    "info": " Quinoa is a “super grain.” It provides you whole grain carbohydrates for sustained energy, fiber, energy- boosting B vitamins, and protein. It can be served savory or sweet.",
+                    "img": "../images/quinoa.jpg"
+                }
+            },
+            "fruits": {
+                "bananas": {
+                    "name": "bananas",
+                    "info": "Bananas are packed with fiber, B vitamins, and potassium—three nutrients which keep you energized and aid muscle function. Grab a banana for the perfect on-the-go snack or start your day with a banana and yogurt or some milk.",
+                    "img": "../images/bananas.jpg"
+                },
+                "apples": {
+                    "name": "Apples",
+                    "info": "Apples contain fiber, which is harder to digest so it gives you prolonged energy. ",
+                    "img": "../images/apples.jpg"
+                },
+                "oranges": {
+                    "name": "Oranges",
+                    "info": "Oranges contain vitamin C, potassium, folate, pectin, and fiber. This citrus powerhouse provides you steady energy and refreshes your mood and alertness.",
+                    "img": "../images/oranges.jpg"
+                },
+                "melons": {
+                    "name": "Melons",
+                    "info": "Melons are high water-content fruits which help you stay hydrated and energized.",
+                    "img": "../images/melons.jpg"
+                }
+            },
+            "quickFixes": {
+                "coffee": {
+                    "name": "Coffee",
+                    "info": "Coffee, of course. The caffeine in coffee temporarily improves focus and energy. To stay alert, sip coffee throughout the day instead of taking one large dose all at once.",
+                    "img": "../images/coffee.jpg"
+                },
+                "tea": {
+                    "name": "Tea",
+                    "info": "Tea has caffeine and other added benefits such as antioxidants. Its stress reducing and alertness improving properties increase energy while allowing you to relax.",
+                    "img": "../images/tea.jpg"
+                },
+                "chocolate": {
+                    "name": "Chocolate",
+                    "info": "Chocolate, in moderation, is good for you. In particular, the healthiest variety of chocolate is dark chocolate. It contains some caffeine and theobromine, which is a stimulant. The endorphin-boosting chemicals in chocolate are a plus. Chocolate boosts mood and energy—and it’s delicious.",
+                    "img": "../images/chocolate.jpg"
+                },
+                "honey": {
+                    "name": "Honey",
+                    "info": "Honey is a low-glycemic sweetener which provides time-released energy throughout a workout and replenishes muscles after a workout. Add it to your breakfast or tea.",
+                    "img": "../images/honey.jpg"
+                }
+            },
+            "dairy": {
+                "yogurt": {
+                    "name": "Yogurt",
+                    "info": "Reach for the low-fat or nonfat and low-sugar yogurt at your grocery store. Yogurt will provide you the protein to keep you going. Best part is you can top it with anything! A combination of fruits, nuts, and honey should provide you the taste and nutrition you need.",
+                    "img": "../images/yogurt.jpg"
+                },
+                "cheese": {
+                    "name": "Cheese",
+                    "info": "Cheese is a protein-rich dairy food, which can help you stay awake and alert. Skip the fat-filled cheeses and opt instead for healthier cheeses such as ricotta and farmer’s cheese.",
+                    "img": "../images/cheese.jpg"
+                }
+            }
+        }
+    }
+}
