@@ -15,3 +15,13 @@
 .icon-block .material-icons {
     font-size: inherit;
 }
+
+.carousel .indicators .indicator-item {
+  display: none;
+}
+
+
+
+
+
+
