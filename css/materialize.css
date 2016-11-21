@@ -7728,7 +7728,11 @@ input[type=range]:focus::-ms-fill-upper {
 .carousel.carousel-slider {
   top: 0;
   left: 0;
+<<<<<<< HEAD
   height: 0;
+=======
+  height: 0; /*adjusted this height to increase carousel slide height*/
+>>>>>>> t-branch
 }
 
 .carousel.carousel-slider .carousel-fixed-item {
@@ -7765,7 +7769,11 @@ input[type=range]:focus::-ms-fill-upper {
 .carousel .carousel-item {
   display: none;
   width: 200px;
+<<<<<<< HEAD
   height: 400px;
+=======
+  height: 400px; 
+>>>>>>> t-branch
   position: absolute;
   top: 0;
   left: 0;
