@@ -102,7 +102,7 @@
             },
             "fruits": {
                 "bananas": {
-                    "name": "bananas",
+                    "name": "Bananas",
                     "info": "Bananas are packed with fiber, B vitamins, and potassium—three nutrients which keep you energized and aid muscle function. Grab a banana for the perfect on-the-go snack or start your day with a banana and yogurt or some milk.",
                     "img": "../images/bananas.jpg"
                 },
