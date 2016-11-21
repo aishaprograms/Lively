@@ -33,7 +33,7 @@
                 <div class="row center">
                     <!-- Click start button to go through quiz. ID for start button is start-button -->
                     <!-- $('.carousel').carousel('next'); -->
-                    <a href="#" id="start-button" class="btn-large waves-effect waves-light orange">Let's Get Started</a>
+                    <a id="start-button" class="btn-large waves-effect waves-light orange">Get Started</a>
                 </div>
             </div>
         </div>
@@ -171,7 +171,7 @@
             <div class="row center">
                 <!-- Clicking food-button saves user selections as search terms -->
                 <!-- $('.carousel').carousel('next'); -->
-                <a href="#" id="food-button" class="btn-large waves-effect waves-light orange">Next</a>
+                <a id="food-button" class="btn-large waves-effect waves-light orange">Next</a>
             </div>
         </div>
         <!-- Third slide -->
@@ -200,7 +200,7 @@
             <div class="row center">
                 <!-- Clicking move-button saves user selections as search terms -->
                 <!-- $('.carousel').carousel('next'); -->
-                <a href="#" id="move-button" class="btn-large waves-effect waves-light orange">Submit</a>
+                <a href="#eat" id="move-button" class="btn-large waves-effect waves-light orange">Submit</a>
             </div>
         </div>
     </div>
@@ -240,7 +240,21 @@
     <!-- Energy Boosting Tips Section -->
     <div class="section blue-grey lighten-5" id="eat">
         <div class="container">
-            <h3>Eat</h3>
+            <div class="row">
+                <h3>Eat</h3>
+                <p>You are what you eat. So if you want to be energetic and healthy, you should select energizing healthy foods. To learn more, click 'Get Started.'</p>
+            </div>
+            <div class="row">
+                <h4>Your Energy Foods</h4>
+                <p>Some of your favorite foods to eat might be good for you. To learn more about these foods, click 'Get Started.'</p>
+                <!-- Information about foods will be inserted here -->
+                <div class="section" id="food-info-section"></div>
+            </div>
+            <div class="row">
+                <h4>Recipes</h4>
+                <p>Do you want to know where to get started in preparing delicious, healthy meals? Click 'Get Started' and select your favorite energy foods.</p>
+                <div class="section" id="recipe-section"></div>
+            </div>
         </div>
     </div>
     <div class="section" id="eat">
@@ -287,10 +301,14 @@
     <script src="assets/javascript/materialize.js "></script>
     <script src="assets/javascript/init.js "></script>
     <script src="assets/javascript/effects.js "></script>
+    <script type="text/javascript" src="assets/javascript/functionality.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
         $('.carousel.carousel-slider').carousel({
             full_width: true
+        });
+        $('#start-button').on('click', function() {
+            $('.carousel').carousel('next');
         });
     });
     </script>
