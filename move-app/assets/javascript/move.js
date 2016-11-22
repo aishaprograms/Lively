@@ -3,7 +3,7 @@ var vId = [];
 // var exercise contains the user's movement choice
 var exercise;
 // clicking on input element grabs the value of "data-move" stores it in "exercise"
-$('input').on('click', function(){
+$('input[name=move-group').on('click', function(){
 	exercise = $(this).data('move');
 	
 // after selecting submit "#move-button" activate query search with value from "exercise"
