@@ -8,6 +8,7 @@
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
     <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
@@ -22,9 +23,9 @@
         </div>
     </nav>
     <!-- Change data-indicators to false when done -->
-    <div class="carousel carousel-slider" id="index-carousel" data-indicators="true">
+    <div id="index-carousel" data-indicators="true">
         <!-- First slide -->
-        <div class="carousel-item blue-grey lighten-5" href='#one!' id="first-slide">
+        <div class="carousel-item blue-grey lighten-5" id="first-slide">
             <div class="container">
                 <h1 class="header center">Hi, I'm Lively</h1>
                 <div class="row center">
@@ -38,169 +39,173 @@
             </div>
         </div>
         <!-- Second slide -->
-        <div class="carousel-item blue-grey lighten-5" href="#two!" id="second-slide">
-            <div class="row center">
-                <h5 class="header col s12 light">Select up to four of your favorite foods from the following list:</h5>
-            </div>
-            <div class="row center" id="food-selections">
-                <div class="container">
-                    <div class="row">
-                        <div class="col s2">
-                            <form action="#">
-                                <p>
-                                    <input type="checkbox" id="Cashews" />
-                                    <label for="Cashews">Cashews</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" id="Almonds" />
-                                    <label for="Almonds">Almonds</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" id="Hazelnuts" />
-                                    <label for="Hazelnuts">Hazelnuts</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" id="Peanutbutter" />
-                                    <label for="Peanutbutter">Peanut butter</label>
-                                </p>
-                            </form>
-                        </div>
-                        <div class="col s2">
-                            <form action="#">
-                                <p>
-                                    <input type="checkbox" id="Chicken" />
-                                    <label for="Chicken">Chicken</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" id="Salmon" />
-                                    <label for="Salmon">Salmon</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" id="Eggs" />
-                                    <label for="Eggs">Eggs</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" id="Yogurt" />
-                                    <label for="Yogurt">Yogurt</label>
-                                </p>
-                            </form>
-                        </div>
-                        <div class="col s2">
-                            <form action="#">
-                                <p>
-                                    <input type="checkbox" id="Spinach" />
-                                    <label for="Spinach">Spinach</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" id="Sweetpotato" />
-                                    <label for="Sweetpotato">Sweet potato</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" id="Edamame" />
-                                    <label for="Edamame">Edmame</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" id="Chicken" />
-                                    <label for="Chicken">Chicken</label>
-                                </p>
-                            </form>
-                        </div>
-                        <div class="col s2">
-                            <form action="#">
-                                <p>
-                                    <input type="checkbox" id="Oatmeal" />
-                                    <label for="Oatmeal">Oatmeal</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" id="Popcorn" />
-                                    <label for="Popcorn">Popcorn</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" id="Beans" />
-                                    <label for="Beans">Beans</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" id="Cereal" />
-                                    <label for="Cereal">Cereal</label>
-                                </p>
-                            </form>
-                        </div>
-                        <div class="col s2">
-                            <form action="#">
-                                <p>
-                                    <input type="checkbox" id="Bananas" />
-                                    <label for="Bananas">Bananas</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" id="Apples" />
-                                    <label for="Apples">Apples</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" id="Oranges" />
-                                    <label for="Oranges">Oranges</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" id="Melons" />
-                                    <label for="Melons">Melons</label>
-                                </p>
-                            </form>
-                        </div>
-                        <div class="col s2">
-                            <form action="#">
-                                <p>
-                                    <input type="checkbox" id="Coffee" />
-                                    <label for="Coffee">Coffee</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" id="Tea" />
-                                    <label for="Tea">Tea</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" id="Chocolate" />
-                                    <label for="Chocolate">Chocolate</label>
-                                </p>
-                                <p>
-                                    <input type="checkbox" id="Honey" />
-                                    <label for="Honey">Honey</label>
-                                </p>
-                            </form>
+        <div class="carousel-item blue-grey lighten-5" id="second-slide">
+            <div class="container">
+                <div class="row center">
+                    <h5 class="header col s12 light">Select up to four of your favorite foods from the following list:</h5>
+                </div>
+                <div class="row center" id="food-selections">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s2">
+                                <form action="#">
+                                    <p>
+                                        <input type="checkbox" id="Cashews" />
+                                        <label for="Cashews">Cashews</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="Almonds" />
+                                        <label for="Almonds">Almonds</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="Hazelnuts" />
+                                        <label for="Hazelnuts">Hazelnuts</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="Peanutbutter" />
+                                        <label for="Peanutbutter">Peanut butter</label>
+                                    </p>
+                                </form>
+                            </div>
+                            <div class="col s2">
+                                <form action="#">
+                                    <p>
+                                        <input type="checkbox" id="Chicken" />
+                                        <label for="Chicken">Chicken</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="Salmon" />
+                                        <label for="Salmon">Salmon</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="Eggs" />
+                                        <label for="Eggs">Eggs</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="Yogurt" />
+                                        <label for="Yogurt">Yogurt</label>
+                                    </p>
+                                </form>
+                            </div>
+                            <div class="col s2">
+                                <form action="#">
+                                    <p>
+                                        <input type="checkbox" id="Spinach" />
+                                        <label for="Spinach">Spinach</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="Sweetpotato" />
+                                        <label for="Sweetpotato">Sweet potato</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="Edamame" />
+                                        <label for="Edamame">Edmame</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="Chicken" />
+                                        <label for="Chicken">Chicken</label>
+                                    </p>
+                                </form>
+                            </div>
+                            <div class="col s2">
+                                <form action="#">
+                                    <p>
+                                        <input type="checkbox" id="Oatmeal" />
+                                        <label for="Oatmeal">Oatmeal</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="Popcorn" />
+                                        <label for="Popcorn">Popcorn</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="Beans" />
+                                        <label for="Beans">Beans</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="Cereal" />
+                                        <label for="Cereal">Cereal</label>
+                                    </p>
+                                </form>
+                            </div>
+                            <div class="col s2">
+                                <form action="#">
+                                    <p>
+                                        <input type="checkbox" id="Bananas" />
+                                        <label for="Bananas">Bananas</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="Apples" />
+                                        <label for="Apples">Apples</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="Oranges" />
+                                        <label for="Oranges">Oranges</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="Melons" />
+                                        <label for="Melons">Melons</label>
+                                    </p>
+                                </form>
+                            </div>
+                            <div class="col s2">
+                                <form action="#">
+                                    <p>
+                                        <input type="checkbox" id="Coffee" />
+                                        <label for="Coffee">Coffee</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="Tea" />
+                                        <label for="Tea">Tea</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="Chocolate" />
+                                        <label for="Chocolate">Chocolate</label>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" id="Honey" />
+                                        <label for="Honey">Honey</label>
+                                    </p>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row center">
-                <!-- Clicking food-button saves user selections as search terms -->
-                <!-- $('.carousel').carousel('next'); -->
-                <a id="food-button" class="btn-large waves-effect waves-light orange">Next</a>
+                <div class="row center">
+                    <!-- Clicking food-button saves user selections as search terms -->
+                    <!-- $('.carousel').carousel('next'); -->
+                    <a id="food-button" class="btn-large waves-effect waves-light orange">Next</a>
+                </div>
             </div>
         </div>
         <!-- Third slide -->
-        <div class="carousel-item blue-grey lighten-5" href="#three!" id="third-slide">
-            <div class="row center">
-                <h5 class="header col s12 light">What's your favorite way to move?</h5>
-            </div>
-            <div class="row center" id="move-selections">
-                <div class="container">
-                    <form action="#">
-                        <p>
-                            <input name="move-group" type="radio" id="yoga" />
-                            <label for="yoga">Yoga</label>
-                        </p>
-                        <p>
-                            <input name="move-group" type="radio" id="cardio" />
-                            <label for="cardio">Cardio</label>
-                        </p>
-                        <p>
-                            <input name="move-group" type="radio" id="strength" />
-                            <label for="strength">Strength</label>
-                        </p>
-                    </form>
+        <div class="carousel-item blue-grey lighten-5" id="third-slide">
+            <div class="container">
+                <div class="row center">
+                    <h5 class="header col s12 light">What's your favorite way to move?</h5>
                 </div>
-            </div>
-            <div class="row center">
-                <!-- Clicking move-button saves user selections as search terms -->
-                <!-- $('.carousel').carousel('next'); -->
-                <a href="#eat" id="move-button" class="btn-large waves-effect waves-light orange">Submit</a>
+                <div class="row center" id="move-selections">
+                    <div class="container">
+                        <form action="#">
+                            <p>
+                                <input name="move-group" type="radio" id="yoga" />
+                                <label for="yoga">Yoga</label>
+                            </p>
+                            <p>
+                                <input name="move-group" type="radio" id="cardio" />
+                                <label for="cardio">Cardio</label>
+                            </p>
+                            <p>
+                                <input name="move-group" type="radio" id="strength" />
+                                <label for="strength">Strength</label>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+                <div class="row center">
+                    <!-- Clicking move-button saves user selections as search terms -->
+                    <!-- $('.carousel').carousel('next'); -->
+                    <a href="#eat" id="move-button" class="btn-large waves-effect waves-light orange">Submit</a>
+                </div>
             </div>
         </div>
     </div>
@@ -298,20 +303,11 @@
     </footer>
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js "></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script src="assets/javascript/materialize.js "></script>
     <script src="assets/javascript/init.js "></script>
     <script src="assets/javascript/effects.js "></script>
     <script type="text/javascript" src="assets/javascript/functionality.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $('.carousel.carousel-slider').carousel({
-            full_width: true
-        });
-        $('#start-button').on('click', function() {
-            $('.carousel').carousel('next');
-        });
-    });
-    </script>
 </body>
 
 </html>

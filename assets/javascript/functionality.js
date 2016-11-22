@@ -66,10 +66,17 @@ $(document).ready(function() {
     //So that means after all the questions are answered on terence's homepage html, it switches to hadi's result
     //html and appends the results using the api's (only the recipe api for now).  So the on click "food-button" should
     //be on the last carousel page.
-
+    // Slick Carousel code for slider
+    $('#index-carousel').slick({
+        dots: false,
+        arrows: false
+    });
+    $('#start-button').on('click', function() {
+        $('#index-carousel').slick('slickNext');
+    });
     //done-btn changed to food-button
     $("#food-button").click(function() {
-        $('.carousel').carousel('next');
+        $('#index-carousel').slick('slickNext');
 
         //this function uses the recipe api to pull three recipes from and display them to the page.  Now that we're switching pages
         //though after the questoinaire, the data in the chosenFoods array should be stored in the browser, at least for the time being,

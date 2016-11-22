@@ -15,16 +15,11 @@
 .icon-block .material-icons {
     font-size: inherit;
 }
-<<<<<<< HEAD
-=======
 
 .carousel .indicators .indicator-item {
-  display: none;
+    display: none;
 }
 
-
-
-
-
-
->>>>>>> t-branch
+#index-carousel {
+    height: 400px;
+}
