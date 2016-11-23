@@ -1,17 +1,21 @@
 var database = firebase.database();
 
-document.querySelector('#search-food').onclick = function() {
-    var food = $('#food-input').val().trim();
-    var foodRef = database.ref('/home/foods/nuts/cashews');
+document.querySelector('#food-button').onclick = function() {
+    var food = $('input[type=checkbox]:checked').data('name');
+    console.log(food);
+    var foodRef = database.ref('/home/foods/' + food);
     foodRef.once('value').then(function(snapshot) {
-        var info = snapshot.val().info;
-        var foodName = snapshot.val().name;
+        var data = snapshot.val();
+        var info = data.info;
+        var foodName = data.name;
         var newDiv = $('<div>');
+        //adds materilize card  to div
+        newDiv.addClass('card');
         var newImg = $('<img>');
-        newImg.attr('src', 'assets/images/cashews.jpg');
+        newImg.attr('src', data.img);
         newDiv.append(foodName);
         newDiv.append(newImg);
         newDiv.append(info);
-        $('#test-div').append(newDiv);
+        $('#food-info-section').append(newDiv);
     });
 };

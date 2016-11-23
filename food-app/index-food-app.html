@@ -48,7 +48,7 @@
                         <div class="col s2">
                             <form action="#">
                                 <p>
-                                    <input type="checkbox" id="Cashews" />
+                                    <input type="checkbox" id="Cashews" data-name="cashews" />
                                     <label for="Cashews">Cashews</label>
                                 </p>
                                 <p>
@@ -60,7 +60,7 @@
                                     <label for="Hazelnuts">Hazelnuts</label>
                                 </p>
                                 <p>
-                                    <input type="checkbox" id="Peanutbutter" />
+                                    <input type="checkbox" :checked id="Peanutbutter" />
                                     <label for="Peanutbutter">Peanut butter</label>
                                 </p>
                             </form>
@@ -302,6 +302,19 @@
     <script src="assets/javascript/init.js "></script>
     <script src="assets/javascript/effects.js "></script>
     <script type="text/javascript" src="assets/javascript/functionality.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDN9I5gXAiTeRbI8rwNOG1OBLMRGIYtEnw",
+        authDomain: "lively-da50b.firebaseapp.com",
+        databaseURL: "https://lively-da50b.firebaseio.com",
+        storageBucket: "lively-da50b.appspot.com",
+        messagingSenderId: "663201689530"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script type="text/javascript" src="assets/javascript/foodapp.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
         $('.carousel.carousel-slider').carousel({
