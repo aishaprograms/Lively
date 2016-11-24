@@ -30,6 +30,7 @@ $('input[name=move-group]').on('click', function() {
             // randomize the videoId stored in the videoIdArray; assign this random value to var "vId"
             vId = videoIdArray[Math.floor(Math.random() * videoIdArray.length)];
 
+
             // create var "video" iframe element with frame properties and attributes; store in var video
             var video = $('<iframe id="ytplayer" type="text/html" width="640" height="360" frameborder="0"></iframe>');
 
@@ -44,8 +45,6 @@ $('input[name=move-group]').on('click', function() {
             // append the "videoCard" to the div with id of "player"; it will append once user clicks the submit button with id of move-button
             $('#player').append(videoCard);
             // take out this console.log before production!
-            console.log(videoIdArray);
-            console.log(vId);
         });
     });
 });
