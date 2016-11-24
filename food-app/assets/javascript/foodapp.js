@@ -9,8 +9,11 @@ document.querySelector('#food-button').onclick = function() {
         var info = data.info;
         var foodName = data.name;
         var newDiv = $('<div>');
+        var sub1NewDiv = $('<div>');
         //adds materilize card  to div
-        newDiv.addClass('card');
+        newDiv.addClass('row col s12 m7 card  small');
+        sub1NewDiv.addClass('card-image');
+        sub1NewDiv.append($('<span>').text(foodName).addClass('card-title'));
         var newImg = $('<img>');
         newImg.attr('src', data.img);
         newDiv.append(foodName);
