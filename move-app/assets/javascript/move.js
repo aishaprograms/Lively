@@ -27,6 +27,7 @@ $('input[name=move-group]').on('click', function() {
             videoIdArray.push(results[i].id.videoId);
 
             }
+
             // randomize the videoId stored in the videoIdArray; assign this random value to var "vId"
             vId = videoIdArray[Math.floor(Math.random() * videoIdArray.length)];
 
@@ -43,9 +44,21 @@ $('input[name=move-group]').on('click', function() {
             // nest the "cardImage" into the "div class='card'"
             var videoCard = $('<div class="card"></div>').append(cardImage).append($('<div class="card content"><span class="card-title activator grey-text text-darken-4">Need more?<i class="material-icons right">more_vert</i></span></div><div class="card-reveal"><span class="card-title grey-text text-darken-4">Check out more of these workout tips!<i class="material-icons right">close</i></span><p>More workout links</p></div>'));
             // append the "videoCard" to the div with id of "player"; it will append once user clicks the submit button with id of move-button
-            $('#player').append(videoCard);
+            $('#player').html(videoCard);
             // take out this console.log before production!
         });
     });
+
+    $(document).on('click', '.material-icons', function() {
+
+        var queryURL = 'https://www.googleapis.com/youtube/v3/channels?part=snippet&contentDetails&key=AIzaSyDK_Rztci24wnYItAD8mAPmF87ZtvCObOs&q=' + exercise + '&id=UCtzvzjLp-K71bBnIxjkjE4Q';
+
+
+        $.ajax({ url: queryURL, method: 'GET' }).done(function(response) {
+            var results = response;
+
+            console.log(response);
+       	}); 
+    });    
 });
 
