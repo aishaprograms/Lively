@@ -44,7 +44,7 @@ $('input[name=move-group]').on('click', function() {
             // nest the "cardImage" into the "div class='card'"; use .html to replace preloader
             var videoCard = $('<div class="card-panel light-blue lighten-1"><div class="progress"><div class="indeterminate"></div></div></div>').html(cardImage).append($('<div class="card content"> <p><input name="move-group" type="radio" id="yoga" data-move="yoga"/><label for="yoga">Yoga</label></p> <p><input name="move-group" type="radio" id="cardio" data-move="cardio"/><label for="cardio">Cardio</label></p> <p><input name="move-group" type="radio" id="strength" data-move="strength-training"/><label for="strength">strength</label></p></div>'));
 
-            // append the "videoCard" to the div with id of "player"; it will append once user clicks the submit button with id of move-button
+            // insert the "videoCard" to the div with id of "player"; it will add once user clicks the submit button with id of move-button; use .html() to prevent multiple videos
             $('#player').html(videoCard);
         }); 
         
