@@ -11,7 +11,7 @@ $('input[name=move-group]').on('click', function() {
     // after selecting submit "#move-button" activate query search with value from "exercise"
     $('#move-button').on('click', function() {
 
-        var queryURL = 'https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyDK_Rztci24wnYItAD8mAPmF87ZtvCObOs&q=' + exercise + '&type=video';
+        var queryURL = 'https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyDK_Rztci24wnYItAD8mAPmF87ZtvCObOs&q=' + exercise + '&type=video&prettyPrint=false&eventType=completed&maxResults=15&safeSearch=strict&topicId=/m/027x7n&topicId=/m/0kt51';
 
 
         $.ajax({ url: queryURL, method: 'GET' }).done(function(response) {
@@ -30,17 +30,23 @@ $('input[name=move-group]').on('click', function() {
             // randomize the videoId stored in the videoIdArray; assign this random value to var "vId"
             vId = videoIdArray[Math.floor(Math.random() * videoIdArray.length)];
 
-            // create iframe element with frame properties and attributes; store in var video
+            // create var "video" iframe element with frame properties and attributes; store in var video
             var video = $('<iframe id="ytplayer" type="text/html" width="640" height="360" frameborder="0"></iframe>');
 
-            // append attribute with src of youtube + the videoId stored in var vId
+            // add attribute with src of youtube + the randomized videoId stored in var "vId"
             video.attr('src', 'https://www.youtube.com/embed/' + vId);
 
-            // append the video to the div with id of "player"; it will append once user clicks the submit button with id of move-button
-            $('#player').append(video);
+            // there are so many ".append()" steps in order to nest the divs in the correct order to produce the materialize card effect
+            // var "cardImage" has class of "video-container" which allows video to be responsive
+            var cardImage = $('<div class="video-container"></div>').append(video);
+            // nest the "cardImage" into the "div class='card'"
+            var videoCard = $('<div class="card"></div>').append(cardImage).append($('<div class="card content"><span class="card-title activator grey-text text-darken-4">Need more?<i class="material-icons right">more_vert</i></span></div><div class="card-reveal"><span class="card-title grey-text text-darken-4">Check out more of these workout tips!<i class="material-icons right">close</i></span><p>More workout links</p></div>'));
+            // append the "videoCard" to the div with id of "player"; it will append once user clicks the submit button with id of move-button
+            $('#player').append(videoCard);
             // take out this console.log before production!
             console.log(videoIdArray);
             console.log(vId);
         });
     });
 });
+
