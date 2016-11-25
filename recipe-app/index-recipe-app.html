@@ -12,6 +12,17 @@
 </head>
 
 <body>
+
+<div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Wait!</h4>
+      <p>Please pick at least 3 favorite foods.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>
+
     <nav class="light-blue lighten-1" role="navigation">
         <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"> Lively</a>
             <ul class="right hide-on-med-and-down">
@@ -19,7 +30,7 @@
                 <li><a href="#move">Move</a></li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-        </div>
+        </div>s
     </nav>
     <!-- Change data-indicators to false when done -->
     <div class="carousel carousel-slider" id="index-carousel" data-indicators="true">
@@ -311,9 +322,12 @@
         $('.carousel.carousel-slider').carousel({
             full_width: true
         });
+
         $('#start-button').on('click', function() {
             $('.carousel').carousel('next');
         });
+
+        $('.modal').modal();
     });
     </script>
 </body>

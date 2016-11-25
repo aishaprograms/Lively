@@ -1,17 +1,12 @@
+
+
 $(document).ready(function() {
+
+
 
     var queryURL; 
     var recipeTopic;
-    var foods = ['cashews', 'almonds', 'hazelnuts',
-        'brazil nuts', 'peanut butter', 'pumpkin seeds',
-        'walnuts', 'lean pork', 'lean beef', ' chicken',
-        'turkey', 'salmon', 'eggs', 'tuna', 'leafy greens', 'spinach', 'romaine',
-        'sweet potato', 'edamame', 'asparagus', 'oatmeal', 'popcorn',
-        'brown rice', 'beans', 'legumes', 'whole grain cereal',
-        'quinoa', 'bananas', 'apples', 'oranges', 'blueberries',
-        'melons', 'yogurt', 'cheese'
-    ];
-     var chosenFoods = [];
+    var chosenFoods = [];
 
 
     function removeA(arr){
@@ -49,6 +44,15 @@ $(document).ready(function() {
   
     $("#food-button").click(function() {
 
+        localStorage.setItem("chosenFoods", chosenFoods);
+
+        if(chosenFoods.length<3){
+            $('#modal1').modal('open');   
+        }    
+
+
+        else{
+
         $('.carousel').carousel('next');
 
         $("#recipesParagraph").empty();
@@ -56,38 +60,71 @@ $(document).ready(function() {
         $("#recipesParagraph").css("font-size","x-large");
         
             
-        function recipeGrabber() {
+        function recipeGrabber() {                   
+                
+                var circle3 = $('<div>');
+                circle3.addClass('circle');
+
+                var circleClip2 = $('<div>');
+                circleClip2.addClass('circle-clipper right');
+                circleClip2.append(circle3);
+
+                var circle = $('<div>');
+                circle.addClass('circle');
+
+                var circleClip = $('<div>');
+                circleClip.addClass('circle-clipper left');
+                circleClip.append(circle);
+
+                var spinLayer = $('<div>');
+                spinLayer.addClass('spinner-layer');
+                spinLayer.append(circleClip, circleClip2);
+
+                var loadingHolder = $('<div>');
+                loadingHolder.addClass('preloader-wrapper big active');
+                loadingHolder.append(spinLayer);
+
+
+                $("#recipeRow").append(loadingHolder);
+
 
             //calling api
             $.ajax({
                 url: queryURL,
                 method: 'GET',
             }).done(function(response) {
-
+                loadingHolder.remove();
 
                 var result = response;
                 console.log(result);
+                var randomRecipeNum = Math.floor(Math.random() * 3);
+
 
                 var link = $("<a>");
-                link.attr("href", result.hits[0].recipe.url);
+                link.attr("href", result.hits[randomRecipeNum].recipe.url);
                 link.attr("target", "_blank");
 
-                var imageURL1 = result.hits[0].recipe.image;
+                var imageURL1 = result.hits[randomRecipeNum].recipe.image;
 
                 var image= $("<img>");
                 image.addClass("responsive-img");
                 image.attr("src", imageURL1);
                 image.css("width","328.5px");
 
-                var recipeName = result.hits[0].recipe.label;
+                var recipeName = result.hits[randomRecipeNum].recipe.label;
+
+                var cardTitleText = $("<div>");
+                cardTitleText.text(recipeName);
+                cardTitleText.css("text-align", "center");
+                // cardTitleText.css("height", "108.5px");
 
                 var cardTitle = $("<div>");
                 cardTitle.addClass("card-title");
-                cardTitle.text(recipeName);
-                cardTitle.css("text-align", "center");
                 cardTitle.css("padding", "13.25px");
                 cardTitle.css("border-top", "4px dotted");
-                cardTitle.css("min-height", "102.5");
+                cardTitle.css("min-height", "138.5px");
+                cardTitle.append(cardTitleText);
+                
 
 
                 var cardImageHolder = $("<div>");
@@ -119,7 +156,6 @@ $(document).ready(function() {
         var recipeTopicTracker=[];
 
         function recipeTopicPicker(){
-                // recipeTopic = chosenFoods[Math.floor(Math.random() * chosenFoods.length)];
                 
                 while(recipeTopicTracker.length < 3){
                 var randomnumber = Math.floor(Math.random()*chosenFoods.length)
@@ -139,6 +175,9 @@ $(document).ready(function() {
 
         }
 
+
+
+        }       
     });
 
 });
