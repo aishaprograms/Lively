@@ -1,14 +1,11 @@
 
-
 $(document).ready(function() {
-
-
-
+    //outer variables
     var queryURL; 
     var recipeTopic;
     var chosenFoods = [];
 
-
+    //removes element from array
     function removeA(arr){
     var what, a= arguments, L= a.length, ax;
     while(L> 1 && arr.length){
@@ -20,7 +17,7 @@ $(document).ready(function() {
     return arr;
     }
 
-
+    //stores user clicks for favorite foods, and deletes elements if item is checked off.
     $('.userInput').on('click', function() {
         
         var name = this.id;
@@ -41,27 +38,32 @@ $(document).ready(function() {
 
     });
 
-  
+    //when the user presses next
     $("#food-button").click(function() {
 
+        //store user chosen foods in local storage
         localStorage.setItem("chosenFoods", chosenFoods);
 
+        //don't allow user to go on if 3 items are not picked
         if(chosenFoods.length<3){
             $('#modal1').modal('open');   
         }    
 
-
+        //allow to continue if 3 items or more are picked
         else{
 
+        //next carouself question
         $('.carousel').carousel('next');
 
+        //replaces old recipe text with new text
         $("#recipesParagraph").empty();
         $("#recipesParagraph").text("Here are some high-energy recipes you can try today! Click the recipes to learn them.");
         $("#recipesParagraph").css("font-size","x-large");
         
-            
+        //function that uses ajax to call api data and make a card and display info on it   
         function recipeGrabber() {                   
                 
+                //html created for preloader and appended when waiting for results
                 var circle3 = $('<div>');
                 circle3.addClass('circle');
 
@@ -93,13 +95,15 @@ $(document).ready(function() {
                 url: queryURL,
                 method: 'GET',
             }).done(function(response) {
+                
+                //remove preloader when results are received
                 loadingHolder.remove();
 
+                
                 var result = response;
-                console.log(result);
                 var randomRecipeNum = Math.floor(Math.random() * 3);
 
-
+                //the following is card html data being dynamically created with recipe data in it and displayed
                 var link = $("<a>");
                 link.attr("href", result.hits[randomRecipeNum].recipe.url);
                 link.attr("target", "_blank");
@@ -125,8 +129,6 @@ $(document).ready(function() {
                 cardTitle.css("min-height", "138.5px");
                 cardTitle.append(cardTitleText);
                 
-
-
                 var cardImageHolder = $("<div>");
                 cardImageHolder.attr("id","card-image");
                 
@@ -153,8 +155,11 @@ $(document).ready(function() {
             });
         }
 
+        //this keeps track of random numbers chosen randomly
         var recipeTopicTracker=[];
 
+        //keep choosing random numbers if the previous number chosen is not in recipeTopicTracker 
+        //until array reaches length of 3
         function recipeTopicPicker(){
                 
                 while(recipeTopicTracker.length < 3){
@@ -166,7 +171,7 @@ $(document).ready(function() {
             
         recipeTopicPicker();
 
-
+        //call api 3 times using the 3 random numbers from above to get three random recipes from chosenFoods
         for (var i = 0; i < 3; i++) {
 
         recipeTopic=chosenFoods[recipeTopicTracker[i]];
