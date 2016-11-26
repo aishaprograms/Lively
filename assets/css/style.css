@@ -15,16 +15,29 @@
 .icon-block .material-icons {
     font-size: inherit;
 }
-<<<<<<< HEAD
-=======
 
 .carousel .indicators .indicator-item {
-  display: none;
+    display: none;
 }
 
+#index-carousel {
+    height: 400px;
+}
 
+.slick-list,
+.slick-track {
+    height: 100%;
+}
 
+.carousel-item >.container {
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    position: relative;
+}
 
-
-
->>>>>>> t-branch
+#move-selections form {
+    width: 100%;
+    max-width: 120px;
+    margin: auto;
+}
