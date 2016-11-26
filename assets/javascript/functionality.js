@@ -107,11 +107,11 @@ $(document).ready(function() {
                     link.attr("href", result.hits[randomRecipeNum].recipe.url);
                     link.attr("target", "_blank");
 
-                    var imageURL1 = result.hits[randomRecipeNum].recipe.image;
+                    var imageURL = result.hits[randomRecipeNum].recipe.image;
 
                     var image = $("<img>");
                     image.addClass("responsive-img");
-                    image.attr("src", imageURL1);
+                    image.attr("src", imageURL);
                     image.css("width", "328.5px");
 
                     var recipeName = result.hits[randomRecipeNum].recipe.label;
@@ -135,7 +135,7 @@ $(document).ready(function() {
                     link.append(cardImageHolder);
 
                     var card = $("<div>");
-                    card.addClass("card");
+                    card.addClass("card medium");
                     card.append(link);
 
                     var cardAction = $("<div>");

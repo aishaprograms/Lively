@@ -12,18 +12,17 @@ document.querySelector('#food-button').onclick = function() {
             var data = snapshot.val();
             var info = data.info;
             var foodName = data.name;
-            var newDiv = $('<div>');
-            var sub1NewDiv = $('<div>');
-            //adds materilize card  to div
-            newDiv.addClass('card  large');
-            sub1NewDiv.addClass('card-image');
-            sub1NewDiv.append($('<span>').text(foodName).addClass('card-title'));
-            var newImg = $('<img>');
-            newImg.attr('src', data.img);
-            newDiv.append(foodName);
-            newDiv.append(newImg);
-            newDiv.append(info);
-            $('#food-info-section').append(newDiv);
+            var newDiv = $('<div>').addClass('card medium');
+            var subNewDiv = $('<div>').addClass('card-image');
+            var newImg = $('<img>').attr('src', data.img);
+            subNewDiv.append(newImg);
+            var title = $('<span>').text(foodName).addClass('card-title');
+            subNewDiv.append(title);
+            var cardInfo = $('<div>').addClass('card-content').text(info);
+            newDiv.append(subNewDiv);
+            newDiv.append(cardInfo);
+            var newCol = $('<div>').addClass('col s4').append(newDiv);
+            $('#food-info-section').append(newCol);
         });
     }
 };
