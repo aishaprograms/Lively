@@ -183,15 +183,15 @@
                 <div class="container">
                     <form action="#">
                         <p>
-                            <input name="move-group" type="radio" id="yoga" />
+                            <input name="move-group" type="radio" id="yoga" data-move="yoga"/>
                             <label for="yoga">Yoga</label>
                         </p>
                         <p>
-                            <input name="move-group" type="radio" id="cardio" />
+                            <input name="move-group" type="radio" id="cardio" data-move="cardio"/>
                             <label for="cardio">Cardio</label>
                         </p>
                         <p>
-                            <input name="move-group" type="radio" id="strength" />
+                            <input name="move-group" type="radio" id="strength" data-move="strength-training"/>
                             <label for="strength">Strength</label>
                         </p>
                     </form>
@@ -200,7 +200,8 @@
             <div class="row center">
                 <!-- Clicking move-button saves user selections as search terms -->
                 <!-- $('.carousel').carousel('next'); -->
-                <a href="#eat" id="move-button" class="btn-large waves-effect waves-light orange">Submit</a>
+                <!-- changed the href for submit button to jump to move section -->
+                <a href="#move" id="move-button" class="btn-large waves-effect waves-light orange">Submit</a>
             </div>
         </div>
     </div>
@@ -257,10 +258,14 @@
             </div>
         </div>
     </div>
-    <div class="section" id="eat">
+    <!-- changed id of this section to "move" -->
+    <div class="section" id="move">
         <div class="container">
-            <h3>Move</h3>
-        </div>
+            <div class="row">
+                <h3>Move</h3>
+                <div id="player"></div>
+            </div>
+        </div>            
     </div>
     <footer class="page-footer orange ">
         <div class="container ">
@@ -297,10 +302,10 @@
         </div>
     </footer>
     <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js "></script>
-    <script src="assets/javascript/materialize.js "></script>
-    <script src="assets/javascript/init.js "></script>
-    <script src="assets/javascript/effects.js "></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="assets/javascript/materialize.js"></script>
+    <script src="assets/javascript/init.js"></script>
+    <script src="assets/javascript/effects.js"></script>
     <script type="text/javascript" src="assets/javascript/functionality.js"></script>
     <script type="text/javascript" src="assets/javascript/moveapp.js"></script>
     <script type="text/javascript">
@@ -313,6 +318,7 @@
         });
     });
     </script>
+    <script src="assets/javascript/move.js"></script>                
 </body>
 
 </html>
