@@ -13,3 +13,25 @@
          }
      });
  });
+
+ $('.carousel.carousel-slider').carousel({
+     full_width: true
+ });
+ $('#start-button').on('click', function() {
+     $('.carousel').carousel('next');
+ });
+ $('.modal').modal();
+
+ // Slick Carousel code for slider
+ $('#index-carousel').slick({
+     dots: false,
+     arrows: false
+ });
+ $('#start-button').on('click', function() {
+     $('#index-carousel').slick('slickNext');
+ });
+ //done-btn changed to food-button
+ $("#food-button").click(function() {
+     $('.carousel').carousel('next');
+     $('#index-carousel').slick('slickNext');
+ });
