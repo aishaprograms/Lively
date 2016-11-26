@@ -23,8 +23,8 @@ $('input[name=move-group]').on('click', function() {
             //  need to add for loop and randomize video
             for (var i = 0; i < results.length; i++) {
 
-            // assign vId the videoId from the response object; vId is declared as global var at the top
-            videoIdArray.push(results[i].id.videoId);
+                // assign vId the videoId from the response object; vId is declared as global var at the top
+                videoIdArray.push(results[i].id.videoId);
 
             }
 
@@ -46,8 +46,7 @@ $('input[name=move-group]').on('click', function() {
 
             // insert the "videoCard" to the div with id of "player"; it will add once user clicks the submit button with id of move-button; use .html() to prevent multiple videos
             $('#player').html(videoCard);
-        }); 
-        
+        });
+
     });
 });
-
