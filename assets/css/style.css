@@ -41,3 +41,7 @@
     max-width: 120px;
     margin: auto;
 }
+
+.parallax-container {
+    height: 200px;
+}

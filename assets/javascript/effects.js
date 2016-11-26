@@ -22,6 +22,8 @@
  });
  $('.modal').modal();
 
+ $('.parallax').parallax();
+
  // Slick Carousel code for slider
  $('#index-carousel').slick({
      dots: false,
