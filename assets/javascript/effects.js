@@ -14,12 +14,6 @@
      });
  });
 
- $('.carousel.carousel-slider').carousel({
-     full_width: true
- });
- $('#start-button').on('click', function() {
-     $('.carousel').carousel('next');
- });
  $('.modal').modal();
 
  $('.parallax').parallax();
@@ -34,7 +28,6 @@
  });
  //done-btn changed to food-button
  $("#food-button").click(function() {
-     $('.carousel').carousel('next');
      $('#index-carousel').slick('slickNext');
  });
 

@@ -53,9 +53,6 @@ $(document).ready(function() {
         //allow to continue if 3 items or more are picked
         else {
 
-            //next carouself question
-            $('.carousel').carousel('next');
-
             //function that uses ajax to call api data and make a card and display info on it   
             function recipeGrabber() {
 
