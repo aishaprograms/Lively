@@ -4,6 +4,7 @@ $(document).ready(function() {
     var recipeTopic;
     var chosenFoods = [];
 
+    //code from stackoverflow answer
     //removes element from array
     function removeA(arr) {
         var what, a = arguments,
@@ -45,7 +46,8 @@ $(document).ready(function() {
 
         //don't allow user to go on if 3 items are not picked
         if (chosenFoods.length < 3) {
-            $('#modal1').modal('open');
+            // $('#modal1').modal('open');
+
         }
 
         //allow to continue if 3 items or more are picked
@@ -53,11 +55,6 @@ $(document).ready(function() {
 
             //next carouself question
             $('.carousel').carousel('next');
-
-            //replaces old recipe text with new text
-            $("#recipesParagraph").empty();
-            $("#recipesParagraph").text("Here are some high-energy recipes you can try today! Click the recipes to learn them.");
-            $("#recipesParagraph").css("font-size", "x-large");
 
             //function that uses ajax to call api data and make a card and display info on it   
             function recipeGrabber() {
@@ -93,63 +90,47 @@ $(document).ready(function() {
                 $.ajax({
                     url: queryURL,
                     method: 'GET',
-                }).done(function(response) {
+                }).done(function(result) {
 
                     //remove preloader when results are received
                     loadingHolder.remove();
 
-
-                    var result = response;
                     var randomRecipeNum = Math.floor(Math.random() * 3);
 
                     //the following is card html data being dynamically created with recipe data in it and displayed
+                    var recipeName = result.hits[randomRecipeNum].recipe.label;
+
                     var link = $("<a>");
                     link.attr("href", result.hits[randomRecipeNum].recipe.url);
                     link.attr("target", "_blank");
+                    link.html('Get Recipe');
 
                     var imageURL = result.hits[randomRecipeNum].recipe.image;
 
-                    var image = $("<img>");
-                    image.addClass("responsive-img");
-                    image.attr("src", imageURL);
-                    image.css("width", "328.5px");
-
-                    var recipeName = result.hits[randomRecipeNum].recipe.label;
-
-                    var cardTitleText = $("<div>");
-                    cardTitleText.text(recipeName);
-                    cardTitleText.css("text-align", "center");
-                    // cardTitleText.css("height", "108.5px");
-
-                    var cardTitle = $("<div>");
-                    cardTitle.addClass("card-title");
-                    cardTitle.css("padding", "13.25px");
-                    cardTitle.css("border-top", "4px dotted");
-                    cardTitle.css("min-height", "138.5px");
-                    cardTitle.append(cardTitleText);
-
-                    var cardImageHolder = $("<div>");
-                    cardImageHolder.attr("id", "card-image");
-
-                    cardImageHolder.append(image, cardTitle);
-                    link.append(cardImageHolder);
-
                     var card = $("<div>");
-                    card.addClass("card medium");
-                    card.append(link);
+                    card.addClass("card medium hoverable");
 
-                    var cardAction = $("<div>");
-                    cardAction.addClass("card-action");
+                    var cardImage = $("<div>");
+                    cardImage.addClass("card-image");
+                    var image = $("<img>");
+                    image.attr("src", imageURL);
 
-                    var cardContent = $("<div>");
-                    cardContent.addClass("card-content");
-                    // cardContent.text();
+                    cardImage.append(image);
 
-                    var cardCol = $("<div>");
-                    cardCol.addClass("col s4");
-                    cardCol.append(card, cardContent);
+                    var cardContent = $("<div>").addClass("card-content grey-text text-darken-4");
+                    var cardTitleText = $("<span>").addClass('card-title truncate');
+                    cardTitleText.text(recipeName);
+                    cardContent.append(cardTitleText);
 
-                    $("#recipeRow").append(cardCol);
+                    var cardAction = $("<div>").addClass("card-action");
+                    cardAction.append(link);
+
+                    card.append(cardImage, cardContent, cardAction);
+
+                    var cardCol = $("<div>").addClass("col s4");
+                    cardCol.append(card);
+
+                    $("#recipeRow").addClass('row').append(cardCol);
 
                 });
             }
