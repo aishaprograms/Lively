@@ -37,3 +37,5 @@
      $('.carousel').carousel('next');
      $('#index-carousel').slick('slickNext');
  });
+
+ $('label').addClass('white-text');
