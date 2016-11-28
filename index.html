@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Add loader
+Black out screen
+Change text after quiz -->
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -190,6 +193,9 @@
             <div class="row center">
                 <!-- Clicking food-button saves user selections as search terms -->
                 <a id="food-button" class="btn-large waves-effect waves-light deep-orange">Next</a>
+                <div class="progress" style="display:none" id="food-loader">
+                    <div class="indeterminate"></div>
+                </div>
             </div>
         </div>
         <!-- Third slide -->
@@ -219,96 +225,101 @@
             <div class="row center">
                 <!-- Clicking move-button saves user selections as search terms -->
                 <a href="#eat" id="move-button" class="btn-large waves-effect waves-light deep-orange">Submit</a>
+                <div class="progress" style="display:none">
+                    <div class="indeterminate"></div>
+                </div>
             </div>
         </div>
     </div>
     <!-- Slick carousel ends here -->
-    <div class="container">
-        <div class="section">
-            <!--   Icon Section   -->
-            <div class="row">
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center deep-orange-text"><i class="material-icons">flash_on</i></h2>
-                        <h5 class="center grey-text text-darken-4">Lightning Speed</h5>
-                        <p class="light grey-text text-darken-4">Don't you wish you had the energy of a lightining bolt. Well Lively is the next best thing. Simply click "Get Started" above to retrieve custom reccomendations or scroll down below for some expert reccomended energy boosters.</p>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center deep-orange-text"><i class="material-icons">group</i></h2>
-                        <h5 class="center grey-text text-darken-4">YOU-ser Focused</h5>
-                        <p class="light grey-text text-darken-4">This app is about YOU! Lively focuses on you, the user, so that all your reccommendations for boosting energy are custom tailored to the most important person in the world... yep, it's you!</p>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center deep-orange-text"><i class="material-icons">thumb_up</i></h2>
-                        <h5 class="center grey-text text-darken-4">Easy Peasy!</h5>
-                        <p class="light grey-text text-darken-4">We've designed lively to be super simple and easy to use. We know that the simpler it is, the more you'll acutally use it. Now go ahead and click the button above to get started!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="section">
-        </div>
-    </div>
-    <div class="parallax-container">
-        <div class="parallax"><img src="assets/images/foods.jpg"></div>
-    </div>
-    <!-- Energy Boosting Tips Section -->
-    <div class="section" id="eat">
+    <div id="results-wrapper">
         <div class="container">
-            <div class="row">
-                <div class="col s12">
-                    <h3 class="grey-text text-darken-4">Eat</h3>
-                    <p class="grey-text text-darken-4">You are what you eat. So if you want to be energetic and healthy, you should select energizing healthy foods. Some of your favorite foods which you already eat might be good for you. Do you want to know where to get started in preparing delicious, healthy meals? Learn more and click 'Get Started' and select your favorite energy foods.</p>
+            <div class="section">
+                <!--   Icon Section   -->
+                <div class="row">
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center deep-orange-text"><i class="material-icons">flash_on</i></h2>
+                            <h5 class="center grey-text text-darken-4">Lightning Speed</h5>
+                            <p class="light grey-text text-darken-4">Don't you wish you had the energy of a lightining bolt. Well Lively is the next best thing. Simply click "Get Started" above to retrieve custom reccomendations or scroll down below for some expert reccomended energy boosters.</p>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center deep-orange-text"><i class="material-icons">group</i></h2>
+                            <h5 class="center grey-text text-darken-4">YOU-ser Focused</h5>
+                            <p class="light grey-text text-darken-4">This app is about YOU! Lively focuses on you, the user, so that all your reccommendations for boosting energy are custom tailored to the most important person in the world... yep, it's you!</p>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center deep-orange-text"><i class="material-icons">thumb_up</i></h2>
+                            <h5 class="center grey-text text-darken-4">Easy Peasy!</h5>
+                            <p class="light grey-text text-darken-4">We've designed lively to be super simple and easy to use. We know that the simpler it is, the more you'll acutally use it. Now go ahead and click the button above to get started!</p>
+                        </div>
+                    </div>
                 </div>
-                <!-- Information about foods will be inserted here -->
-                <div id="food-info-section" class="col s4">
-                </div>
-                <div id="recipe-section" class="col s8">
+            </div>
+            <br>
+            <br>
+            <div class="section">
+            </div>
+        </div>
+        <div class="parallax-container">
+            <div class="parallax"><img src="assets/images/foods.jpg"></div>
+        </div>
+        <!-- Energy Boosting Tips Section -->
+        <div class="section" id="eat">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h3 class="grey-text text-darken-4">Eat</h3>
+                        <p class="grey-text text-darken-4">You are what you eat. So if you want to be energetic and healthy, you should select energizing healthy foods. Some of your favorite foods which you already eat might be good for you. Do you want to know where to get started in preparing delicious, healthy meals? Learn more and click 'Get Started' and select your favorite energy foods.</p>
+                    </div>
+                    <!-- Information about foods will be inserted here -->
+                    <div id="food-info-section" class="col s4">
+                    </div>
+                    <div id="recipe-section" class="col s8">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="parallax-container">
-        <div class="parallax"><img src="assets/images/movement.jpg"></div>
-    </div>
-    <div class="section" id="move">
-        <div class="container">
-            <h3 class="grey-text text-darken-4">Move</h3>
-            <p class="grey-text text-darken-4">One of the best ways to get energized is to exercise, even when you don't feel like moving. Be inspired to get on your feet by clicking "Get Started."</p>
-            <div id="player"></div>
+        <div class="parallax-container">
+            <div class="parallax"><img src="assets/images/movement.jpg"></div>
         </div>
-    </div>
-    <footer class="page-footer blue white-text">
-        <div class="container ">
-            <div class="row ">
-                <div class="col l6 s12 ">
-                    <h5 class="white-text left-align ">Team Decaffinated Bio</h5>
-                    <p class="grey-text text-lighten-4 ">We are a team of developers who've created Lively to make your life a little bit better... a little more "Lively. "</p>
-                </div>
-                <div class="col l6 s12">
-                    <h5 class="white-text ">Developed with ♥ by:</h5>
-                    <ul>
-                        <li><a class="white-text " href="#! ">Aisha Ahmad</a></li>
-                        <li><a class="white-text " href="#! ">Terence Ro</a></li>
-                        <li><a class="white-text " href="#! ">Josh Kim</a></li>
-                        <li><a class="white-text " href="#! ">Hadi Yousufi</a></li>
-                    </ul>
-                </div>
+        <div class="section" id="move">
+            <div class="container">
+                <h3 class="grey-text text-darken-4">Move</h3>
+                <p class="grey-text text-darken-4">One of the best ways to get energized is to exercise, even when you don't feel like moving. Be inspired to get on your feet by clicking "Get Started."</p>
+                <div id="player"></div>
             </div>
         </div>
-        <div class="footer-copyright ">
+        <footer class="page-footer blue white-text">
             <div class="container ">
-                Made with <a class="deep-orange-text" href="http://materializecss.com ">Materialize</a>
-                <div>Icons made by <a href="http://www.flaticon.com/authors/freepik " title="Freepik ">Freepik</a> from <a href="http://www.flaticon.com " title="Flaticon ">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/ " title="Creative Commons BY 3.0 " target="_blank ">CC 3.0 BY</a></div>
+                <div class="row ">
+                    <div class="col l6 s12 ">
+                        <h5 class="white-text left-align ">Team Decaffinated Bio</h5>
+                        <p class="grey-text text-lighten-4 ">We are a team of developers who've created Lively to make your life a little bit better... a little more "Lively. "</p>
+                    </div>
+                    <div class="col l6 s12">
+                        <h5 class="white-text ">Developed with ♥ by:</h5>
+                        <ul>
+                            <li><a class="white-text " href="#! ">Aisha Ahmad</a></li>
+                            <li><a class="white-text " href="#! ">Terence Ro</a></li>
+                            <li><a class="white-text " href="#! ">Josh Kim</a></li>
+                            <li><a class="white-text " href="#! ">Hadi Yousufi</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>
+            <div class="footer-copyright ">
+                <div class="container ">
+                    Made with <a class="deep-orange-text" href="http://materializecss.com ">Materialize</a>
+                    <div>Icons made by <a href="http://www.flaticon.com/authors/freepik " title="Freepik ">Freepik</a> from <a href="http://www.flaticon.com " title="Flaticon ">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/ " title="Creative Commons BY 3.0 " target="_blank ">CC 3.0 BY</a></div>
+                </div>
+            </div>
+        </footer>
+    </div>
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js "></script>
     <script src="assets/javascript/materialize.js "></script>

@@ -50,7 +50,13 @@ document.querySelector('#food-button').onclick = function() {
             $.ajax({
                 url: queryURL,
                 method: 'GET',
-                async: false
+                async: false,
+                beforeSend: function() {
+                    $('#food-loader').show();
+                },
+                complete: function() {
+                    $('#food-loader').hide();
+                },
             }).done(function(result) {
 
                 var randomRecipeNum = Math.floor(Math.random() * 5);

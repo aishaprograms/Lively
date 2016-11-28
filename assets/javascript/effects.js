@@ -29,6 +29,7 @@ $('#index-carousel').slick({
 
 $('#start-button').on('click', function() {
     $('#index-carousel').slick('slickNext');
+    $('#results-wrapper').hide();
 });
 
 $('label').addClass('white-text');

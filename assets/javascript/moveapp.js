@@ -50,5 +50,6 @@ $('#move-button').on('click', function() {
             $('#player').addClass('row').html(videoCard);
         });
     }
+    $('#results-wrapper').show();
 
 });
