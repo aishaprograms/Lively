@@ -120,7 +120,7 @@
                                     <label for="Beans">Beans</label>
                                 </p>
                                 <p class="white-text">
-                                    <input type="checkbox" id="Cereal" class="userInput" data-name="wholegraincereal" />
+                                    <input type="checkbox" id="Cereal" class="userInput" data-name="cereal" />
                                     <label for="Cereal">Cereal</label>
                                 </p>
                             </form>
@@ -136,7 +136,7 @@
                                     <label for="Apples">Apples</label>
                                 </p>
                                 <p class="white-text">
-                                    <input type="checkbox" id="Oranges" class="userInput" data-name="oranges" />
+                                    <input type="checkbox" id="Oranges" class="userInput" data-name="orange" />
                                     <label for="Oranges">Oranges</label>
                                 </p>
                                 <p class="white-text">
@@ -242,12 +242,18 @@
     <div class="section" id="eat">
         <div class="container">
             <div class="row">
-                <h3 class="grey-text text-darken-4">Eat</h3>
-                <p class="grey-text text-darken-4">You are what you eat. So if you want to be energetic and healthy, you should select energizing healthy foods. Some of your favorite foods which you already eat might be good for you. Do you want to know where to get started in preparing delicious, healthy meals? Learn more and click 'Get Started' and select your favorite energy foods.</p>
+                <div class="col s12">
+                    <h3 class="grey-text text-darken-4">Eat</h3>
+                    <p class="grey-text text-darken-4">You are what you eat. So if you want to be energetic and healthy, you should select energizing healthy foods. Some of your favorite foods which you already eat might be good for you. Do you want to know where to get started in preparing delicious, healthy meals? Learn more and click 'Get Started' and select your favorite energy foods.</p>
+                </div>
+                <!-- Information about foods will be inserted here -->
+                <div id="food-info-section" class="col s4">
+                    <h4>Food Info:</h4>
+                </div>
+                <div id="recipe-section" class="col s8">
+                    <h4>Recipes:</h4>
+                </div>
             </div>
-            <!-- Information about foods will be inserted here -->
-            <div id="food-info-section"></div>
-            <div id="recipeRow"></div>
         </div>
     </div>
     <div class="parallax-container">
@@ -303,8 +309,7 @@
     };
     firebase.initializeApp(config);
     </script>
-    <script type="text/javascript" src="assets/javascript/foodapp.js"></script>
-    <script type="text/javascript" src="assets/javascript/recipeapp.js"></script>
+    <script type="text/javascript" src="assets/javascript/eatapp.js"></script>
     <script type="text/javascript" src="assets/javascript/moveapp.js"></script>
 </body>
 

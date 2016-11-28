@@ -81,8 +81,8 @@
                 "info": "Beans are a high fiber high protein food, which keep energy levels stable throughout the day.",
                 "img": "assets/images/beans.jpg"
             },
-            "wholegraincereal": {
-                "name": "Whole Grain Cereal",
+            "cereal": {
+                "name": "Cereal",
                 "info": "Sugary cereal causes your blood sugar to go up and back down really quick, which can lead to more fatigue and even moodiness. Whole grain carbohydrates are absorbed more slowly, which keep your energy levels elevated and stable.",
                 "img": "assets/images/wholegraincereal.jpg"
             },
@@ -101,7 +101,7 @@
                 "info": "Apples contain fiber, which is harder to digest so it gives you prolonged energy. ",
                 "img": "assets/images/apples.jpg"
             },
-            "oranges": {
+            "orange": {
                 "name": "Oranges",
                 "info": "Oranges contain vitamin C, potassium, folate, pectin, and fiber. This citrus powerhouse provides you steady energy and refreshes your mood and alertness.",
                 "img": "assets/images/oranges.jpg"
