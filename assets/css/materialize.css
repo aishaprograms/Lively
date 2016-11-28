@@ -6400,7 +6400,7 @@ textarea.materialize-textarea {
 
 [type="radio"]:not(:checked) + label:before,
 [type="radio"]:not(:checked) + label:after {
-    border: 2px solid #5a5a5a;
+    border: 2px solid #FFFFFF;
 }
 
 [type="radio"]:not(:checked) + label:after {
@@ -6418,12 +6418,12 @@ textarea.materialize-textarea {
 [type="radio"]:checked + label:after,
 [type="radio"].with-gap:checked + label:before,
 [type="radio"].with-gap:checked + label:after {
-    border: 2px solid #26a69a;
+    border: 2px solid #FFFFFF;
 }
 
 [type="radio"]:checked + label:after,
 [type="radio"].with-gap:checked + label:after {
-    background-color: #26a69a;
+    background-color: #FFFFFF;
 }
 
 [type="radio"]:checked + label:after {

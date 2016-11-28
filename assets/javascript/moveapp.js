@@ -3,15 +3,20 @@ var videoIdArray = [];
 // var vId stores the randomized youtube videoId
 var vId;
 // var exercise contains the user's movement choice
-var exercise;
 // clicking on input element grabs the value of "data-move" stores it in "exercise"
-$('input[name=move-group]').on('click', function() {
-    exercise = $(this).data('move');
+var exercise;
 
-    // after selecting submit "#move-button" activate query search with value from "exercise"
-    $('#move-button').on('click', function() {
+// after selecting submit "#move-button" activate query search with value from "exercise"
+$('#move-button').on('click', function() {
+    exercise = $('input[type=radio]:checked').data('move');
 
-        var queryURL = 'https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyDK_Rztci24wnYItAD8mAPmF87ZtvCObOs&q=' + exercise + '&type=video&prettyPrint=false&eventType=completed&maxResults=15&safeSearch=strict&topicId=/m/027x7n&topicId=/m/0kt51';
+    if (exercise === undefined) {
+        $('#move-modal').modal('open');
+        $('#move-button').attr('href', '#');
+    } else {
+        $('#move-button').attr('href', '#eat');
+        var queryURL = 'https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyDK_Rztci24wnYItAD8mAPmF87ZtvCObOs&q=' +
+            exercise + '&type=video&prettyPrint=false&eventType=completed&maxResults=15&safeSearch=strict&topicId=/m/027x7n&topicId=/m/0kt51';
 
 
         $.ajax({ url: queryURL, method: 'GET' }).done(function(response) {
@@ -44,6 +49,6 @@ $('input[name=move-group]').on('click', function() {
             // insert the "videoCard" to the div with id of "player"; it will add once user clicks the submit button with id of move-button; use .html() to prevent multiple videos
             $('#player').addClass('row').html(videoCard);
         });
+    }
 
-    });
 });

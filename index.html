@@ -13,14 +13,32 @@
 </head>
 
 <body>
+    <div id="foods-modal" class="modal">
+        <div class="modal-content">
+            <h4>Oops!</h4>
+            <p>Please select up to four foods.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+        </div>
+    </div>
+    <div id="move-modal" class="modal">
+        <div class="modal-content">
+            <h4>Oops!</h4>
+            <p>Please select one type of exercise.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+        </div>
+    </div>
     <nav class="blue" role="navigation">
-        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"> Lively</a>
+        <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo"> Lively</a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="#eat">Eat</a></li>
                 <li><a href="#move">Move</a></li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-        </div>s
+        </div>
     </nav>
     <!-- Carousel created using Slick.js -->
     <div id="index-carousel">
@@ -40,7 +58,8 @@
         <!-- Second slide -->
         <div class=".slick-carousel-item blue white-text" id="second-slide">
             <div class="row center">
-                <h5 class="header col s12 light">Select up to four of your favorite foods from the following list:</h5>
+                <h5 class="header col s12 light">Here's a list of energizing foods. What would you like to eat today? </h5>
+                <p>Select up to four foods.</p>
             </div>
             <div class="row center" id="food-selections">
                 <div class="container">
@@ -92,8 +111,8 @@
                                     <label for="Spinach">Spinach</label>
                                 </p>
                                 <p class="white-text">
-                                    <input type="checkbox" id="Sweetpotato" class="userInput" data-name="sweetpotato" />
-                                    <label for="Sweetpotato">Sweet potato</label>
+                                    <input type="checkbox" id="Cheese" class="userInput" data-name="cheese" />
+                                    <label for="Cheese">Cheese</label>
                                 </p>
                                 <p class="white-text">
                                     <input type="checkbox" id="Edamame" class="userInput" data-name="edamame" />
@@ -177,6 +196,7 @@
         <div class=".slick-carousel-item blue white-text" id="third-slide">
             <div class="row center">
                 <h5 class="header col s12 light">What's your favorite way to move?</h5>
+                <p>Select one type of exercise.</p>
             </div>
             <div class="row center" id="move-selections">
                 <div class="container">
@@ -248,10 +268,8 @@
                 </div>
                 <!-- Information about foods will be inserted here -->
                 <div id="food-info-section" class="col s4">
-                    <h4>Food Info:</h4>
                 </div>
                 <div id="recipe-section" class="col s8">
-                    <h4>Recipes:</h4>
                 </div>
             </div>
         </div>
