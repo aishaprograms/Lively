@@ -49,7 +49,8 @@ $('#move-button').on('click', function() {
             // insert the "videoCard" to the div with id of "player"; it will add once user clicks the submit button with id of move-button; use .html() to prevent multiple videos
             $('#player').addClass('row').html(videoCard);
         });
+        $('#results-wrapper').show();
+
     }
-    $('#results-wrapper').show();
 
 });
