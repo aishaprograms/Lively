@@ -5,10 +5,12 @@ var vId;
 // var exercise contains the user's movement choice
 // clicking on input element grabs the value of "data-move" stores it in "exercise"
 var exercise;
+var channel;
 
 // after selecting submit "#move-button" activate query search with value from "exercise"
 $('#move-button').on('click', function() {
     exercise = $('input[type=radio]:checked').data('move');
+    channel = $('input[type=radio]:checked').data('channel');
 
     if (exercise === undefined) {
         $('#move-modal').modal('open');
@@ -16,7 +18,7 @@ $('#move-button').on('click', function() {
     } else {
         $('#move-button').attr('href', '#eat');
         var queryURL = 'https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyDK_Rztci24wnYItAD8mAPmF87ZtvCObOs&q=' +
-            exercise + '&type=video&prettyPrint=false&eventType=completed&maxResults=15&safeSearch=strict&topicId=/m/027x7n&topicId=/m/0kt51';
+            exercise + '&channelId=' + channel + '&type=video&prettyPrint=false&eventType=completed&maxResults=30&safeSearch=strict&topicId=/m/027x7n';
 
 
         $.ajax({ url: queryURL, method: 'GET' }).done(function(response) {
@@ -29,7 +31,7 @@ $('#move-button').on('click', function() {
                 videoIdArray.push(results[i].id.videoId);
 
             }
-
+            console.log(results);
             // randomize the videoId stored in the videoIdArray; assign this random value to var "vId"
             vId = videoIdArray[Math.floor(Math.random() * videoIdArray.length)];
 
