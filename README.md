@@ -11,13 +11,6 @@ Heroku App: https://hidden-meadow-92441.herokuapp.com/
 - UI Gradients
 ## Getting Started
 Download the source code for testing purposes only from https://github.com/aishaprograms/Lively
-### Prerequisities
-What to install and how for local development and testing purposes
-```
-- Firebase: visit google.firebase.com to create your real-time database
-- materializecss visit http://materializecss.com/
-- GoogleDocs - Wireframe of choice for intial design layout. Visit docs.google.com
-```
 ## Built With
 * Sublime text
 
@@ -28,7 +21,6 @@ moveapp.js uses YouTube.API with paramaters including channel IDs, search terms,
 foods.json is the JSON which contains the name, info, and img of each ood item
 effects.js dynamically alters the website and initializes dynamic elements
 style.css customizes the website on top of the CSS framework provided by Materialize
-```
 ## Authors
 * **Aisha Ahmad** - *Backend and Javascript management* - [Aisha Ahmad](https://github.com/aishaprograms/)
 * **Hadi Yousufi** - *Front-end design, Food App* - [Hadi Yousufi](https://github.com/hadicodes)
