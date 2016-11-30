@@ -1,5 +1,6 @@
 # Lively
-Lively is a webapp that teaches you how to boost your energy levels everyday through healthy food and body movement suggestions.
+Lively is a webapp that teaches you how to boost your energy levels everyday through healthy food and body movement suggestions. It is mobile responsive.
+Heroku App: https://hidden-meadow-92441.herokuapp.com/
 ## Screenshots
 <img width="1280" alt="screen shot 2016-11-30 at 1 25 38 pm" src="https://cloud.githubusercontent.com/assets/20719058/20768010/ed3ec158-b701-11e6-9269-bb1ef930dd75.png">
 ## Technologies used

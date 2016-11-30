@@ -25,7 +25,6 @@ $('#submit-button').on('click', function() {
             videoIdArray.push(results[i].id.videoId);
 
         }
-        console.log(results);
         // randomize the videoId stored in the videoIdArray; assign this random value to var "vId"
         vId = videoIdArray[Math.floor(Math.random() * videoIdArray.length)];
 
