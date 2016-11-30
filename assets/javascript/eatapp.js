@@ -3,7 +3,9 @@ var foodInputs = [];
 var foodNamesArray = [];
 var database = firebase.database();
 
-document.querySelector('#food-button').onclick = function() {
+$('#submit-button').on('click', function() {
+    $(this).hide();
+    $('#index-carousel').slick('slickNext');
     foodInputs = $('input[type=checkbox]:checked');
     if (foodInputs.length === 0 || foodInputs.length > 4) {
         $('#foods-modal').modal('open');
@@ -51,12 +53,6 @@ document.querySelector('#food-button').onclick = function() {
                 url: queryURL,
                 method: 'GET',
                 async: false,
-                beforeSend: function() {
-                    $('#food-loader').show();
-                },
-                complete: function() {
-                    $('#food-loader').hide();
-                },
             }).done(function(result) {
 
                 var randomRecipeNum = Math.floor(Math.random() * 5);
@@ -101,6 +97,5 @@ document.querySelector('#food-button').onclick = function() {
                 $("#recipe-section").append(cardRow);
             });
         });
-        $('#index-carousel').slick('slickNext');
     }
-};
+});

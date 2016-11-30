@@ -21,15 +21,25 @@ $('.modal').modal({
 
 $('.parallax').parallax();
 
-// Slick Carousel code for slider
+// Intialize Slick.js Carousel code for slider
 $('#index-carousel').slick({
     dots: false,
     arrows: false
 });
+
+$('label').addClass('white-text');
+
 
 $('#start-button').on('click', function() {
     $('#index-carousel').slick('slickNext');
     $('#results-wrapper').hide();
 });
 
-$('label').addClass('white-text');
+
+$('#food-button').on('click', function() {
+    $('#index-carousel').slick('slickNext');
+});
+
+// $('#submit-button').on('click', function() {
+//     $('#index-carousel').slick('slickNext');
+// });

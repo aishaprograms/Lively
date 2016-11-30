@@ -7,14 +7,14 @@ var vId;
 var exercise;
 
 // after selecting submit "#move-button" activate query search with value from "exercise"
-$('#move-button').on('click', function() {
+$('#submit-button').on('click', function() {
     exercise = $('input[type=radio]:checked').data('move');
 
     if (exercise === undefined) {
         $('#move-modal').modal('open');
-        $('#move-button').attr('href', '#');
+        $('#submit-button').attr('href', '#');
     } else {
-        $('#move-button').attr('href', '#eat');
+        $('#submit-button').attr('href', '#eat');
         var queryURL = 'https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyDK_Rztci24wnYItAD8mAPmF87ZtvCObOs&q=' +
             exercise + '&type=video&prettyPrint=false&eventType=completed&maxResults=15&safeSearch=strict&topicId=/m/027x7n&topicId=/m/0kt51';
 

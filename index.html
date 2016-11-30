@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Add loader
-Black out screen
-Change text after quiz -->
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -193,9 +190,6 @@ Change text after quiz -->
             <div class="row center">
                 <!-- Clicking food-button saves user selections as search terms -->
                 <a id="food-button" class="btn-large waves-effect waves-light deep-orange">Next</a>
-                <div class="progress" style="display:none" id="food-loader">
-                    <div class="indeterminate"></div>
-                </div>
             </div>
         </div>
         <!-- Third slide -->
@@ -224,9 +218,18 @@ Change text after quiz -->
             </div>
             <div class="row center">
                 <!-- Clicking move-button saves user selections as search terms -->
-                <a href="#eat" id="move-button" class="btn-large waves-effect waves-light deep-orange">Submit</a>
-                <div class="progress" style="display:none">
-                    <div class="indeterminate"></div>
+                <a href="#eat" id="submit-button" class="btn-large waves-effect waves-light deep-orange">Submit</a>
+            </div>
+        </div>
+        <div class=".slick-carousel-item blue white-text" id="last-slide">
+            <div class="container">
+                <h2 class="header center">Lively</h2>
+                <div class="row center">
+                    <h5 class="header col s12 light">See your results below!</h5>
+                </div>
+                <div class="row center">
+                    <!-- Click start button to go through quiz. ID for start button is start-button -->
+                    <a href="index.html" id="reset-button" class="btn-large waves-effect waves-light deep-orange">Start Over</a>
                 </div>
             </div>
         </div>
@@ -299,7 +302,7 @@ Change text after quiz -->
                 <div class="row ">
                     <div class="col l6 s12 ">
                         <h5 class="white-text left-align ">Team Decaffinated Bio</h5>
-                        <p class="grey-text text-lighten-4 ">We are a team of developers who've created Lively to make your life a little bit better... a little more "Lively. "</p>
+                        <p class="grey-text text-lighten-4 ">We are a team of developers who've created Lively to make your life a little bit better... a little more "Lively."</p>
                     </div>
                     <div class="col l6 s12">
                         <h5 class="white-text ">Developed with ♥ by:</h5>
@@ -314,7 +317,7 @@ Change text after quiz -->
             </div>
             <div class="footer-copyright ">
                 <div class="container ">
-                    Made with <a class="deep-orange-text" href="http://materializecss.com ">Materialize</a>
+                    Made with <a class="orange-text" href="http://materializecss.com ">Materialize</a>
                     <div>Icons made by <a href="http://www.flaticon.com/authors/freepik " title="Freepik ">Freepik</a> from <a href="http://www.flaticon.com " title="Flaticon ">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/ " title="Creative Commons BY 3.0 " target="_blank ">CC 3.0 BY</a></div>
                 </div>
             </div>
