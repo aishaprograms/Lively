@@ -1,5 +1,5 @@
 # Lively
-Lively is a webapp that teaches you how to boost your energy levels everyday through healthy food and body movement suggestions. It is mobile responsive.
+Lively is a webapp that teaches you how to boost your energy levels everyday through healthy food and exercise suggestions. It is mobile responsive.
 Heroku App: https://hidden-meadow-92441.herokuapp.com/
 
 ## Screenshots
@@ -19,10 +19,10 @@ Download the source code for testing purposes only from https://github.com/aisha
 * Sublime text
 
 ## Walk throughs of code
-index.html has all the code for the questionnaire forms and info sections. 
+index.html has all the code for the questionnaire forms and info sections
 eatapp.js uses the firebase database JSON to populate the "Eat" section info cards and Edamam.API with Ajax calls to populate the recipe cards
 moveapp.js uses YouTube.API with paramaters including channel IDs, search terms, and strict safe search to embed a video in the "Move" section
-foods.json is the JSON which contains the name, info, and img of each ood item
+foods.json is the JSON which contains the name, info, and img of each food item
 effects.js dynamically alters the website and initializes dynamic elements
 style.css customizes the website on top of the CSS framework provided by Materialize
 
