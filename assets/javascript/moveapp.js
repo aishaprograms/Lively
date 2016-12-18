@@ -45,8 +45,9 @@ $('#move-button').on('click', function() {
             // there are so many ".append()" steps in order to nest the divs in the correct order to produce the materialize card effect
             // var "cardImage" has class of "video-container" which allows video to be responsive
             var cardImage = $('<div class="video-container"></div>').append(video);
+            var cardReveal = $('<div class="card-reveal"><span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span><p>Here is some more information about this product that is only revealed once clicked on.</p></div>');
             // nest the "cardImage" into the "div class='card'"; use .html to replace preloader
-            var videoCard = $('<div class="card-panel"><div class="progress"><div class="indeterminate"></div></div></div>').html(cardImage);
+            var videoCard = $('<div class="card"></div>').append(cardImage).append(cardReveal);
 
             // insert the "videoCard" to the div with id of "player"; it will add once user clicks the submit button with id of move-button; use .html() to prevent multiple videos
             $('#player').addClass('row').html(videoCard);
