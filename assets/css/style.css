@@ -32,6 +32,10 @@
     position: relative;
 }
 
+#eat-slide {
+    overflow: auto;
+}
+
 #move-selections form {
     width: 100%;
     max-width: 120px;
@@ -43,7 +47,19 @@
 }
 
 
-/*Chnge Checkbox color*/
+/*Adds Gradient color to carousel*/
+
+.blue {
+    background: #00c6ff;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #00c6ff, #0072ff);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #00c6ff, #0072ff);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+/*Change Checkbox color*/
 
 .userInput:checked + label:before {
     top: -4px;

@@ -8,7 +8,7 @@ var exercise;
 var channel;
 
 // after selecting submit "#move-button" activate query search with value from "exercise"
-$('#move-button').on('click', function() {
+$('#submit-button').on('click', function() {
     exercise = $('input[type=radio]:checked').data('move');
     channel = $('input[type=radio]:checked').data('channel');
 
@@ -21,39 +21,40 @@ $('#move-button').on('click', function() {
             exercise + '&channelId=' + channel + '&type=video&prettyPrint=false&eventType=completed&maxResults=30&safeSearch=strict&topicId=/m/027x7n';
 
 
-        $.ajax({ url: queryURL, method: 'GET' }).done(function(response) {
-            var results = response.items;
 
-            //  need to add for loop and randomize video
-            for (var i = 0; i < results.length; i++) {
+    $.ajax({ url: queryURL, method: 'GET' }).done(function(response) {
+        var results = response.items;
 
-                // assign vId the videoId from the response object; vId is declared as global var at the top
-                videoIdArray.push(results[i].id.videoId);
+        //  need to add for loop and randomize video
+        for (var i = 0; i < results.length; i++) {
 
-            }
-            console.log(results);
-            // randomize the videoId stored in the videoIdArray; assign this random value to var "vId"
-            vId = videoIdArray[Math.floor(Math.random() * videoIdArray.length)];
+            // assign vId the videoId from the response object; vId is declared as global var at the top
+            videoIdArray.push(results[i].id.videoId);
+
+        }
+        // randomize the videoId stored in the videoIdArray; assign this random value to var "vId"
+        vId = videoIdArray[Math.floor(Math.random() * videoIdArray.length)];
 
 
-            // create var "video" iframe element with frame properties and attributes; store in var video
-            var video = $('<iframe id="ytplayer" type="text/html" width="640" height="360" frameborder="0"></iframe>');
+        // create var "video" iframe element with frame properties and attributes; store in var video
+        var video = $('<iframe id="ytplayer" type="text/html" width="640" height="360" frameborder="0"></iframe>');
 
-            // add attribute with src of youtube + the randomized videoId stored in var "vId"
-            video.attr('src', 'https://www.youtube.com/embed/' + vId);
 
-            // there are so many ".append()" steps in order to nest the divs in the correct order to produce the materialize card effect
-            // var "cardImage" has class of "video-container" which allows video to be responsive
-            var cardImage = $('<div class="video-container"></div>').append(video);
-            var cardReveal = $('<div class="card-reveal"><span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span><p>Here is some more information about this product that is only revealed once clicked on.</p></div>');
-            // nest the "cardImage" into the "div class='card'"; use .html to replace preloader
-            var videoCard = $('<div class="card"></div>').append(cardImage).append(cardReveal);
+        // add attribute with src of youtube + the randomized videoId stored in var "vId"
+        video.attr('src', 'https://www.youtube.com/embed/' + vId);
 
-            // insert the "videoCard" to the div with id of "player"; it will add once user clicks the submit button with id of move-button; use .html() to prevent multiple videos
-            $('#player').addClass('row').html(videoCard);
-        });
+        // there are so many ".append()" steps in order to nest the divs in the correct order to produce the materialize card effect
+        // var "cardImage" has class of "video-container" which allows video to be responsive
+        var cardImage = $('<div class="video-container"></div>').append(video);
+        // nest the "cardImage" into the "div class='card'"; use .html to replace preloader
+        var videoCard = $('<div class="card-panel"><div class="progress"><div class="indeterminate"></div></div></div>').html(cardImage);
+
+        // insert the "videoCard" to the div with id of "player"; it will add once user clicks the submit button with id of move-button; use .html() to prevent multiple videos
+        $('#player').addClass('row').html(videoCard);
+    });
         $('#results-wrapper').show();
 
     }
+
 
 });
