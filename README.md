@@ -1,5 +1,5 @@
 # Lively
-Lively is a webapp that teaches you how to boost your energy levels everyday through healthy food and exercise suggestions. It is mobile responsive.
+Lively is a webapp that teaches you how to boost your energy levels everyday through healthy food and exercise suggestions. 
 Heroku App: https://lively-app.herokuapp.com/
 
 ## Screenshots
@@ -27,7 +27,7 @@ effects.js dynamically alters the website and initializes dynamic elements
 style.css customizes the website on top of the CSS framework provided by Materialize
 
 ## Authors
-* **Aisha Ahmad** - *Backend and Javascript management* - [Aisha Ahmad](https://github.com/aishaprograms/)
-* **Hadi Yousufi** - *Front-end design, Food App* - [Hadi Yousufi](https://github.com/hadicodes)
-* **Terence Ro** - *Exercise API* - [Terence Ro](https://github.com/terencero)
-* **Josh Kim** - *Food API* - [Joshua Kim](https://github.com/jimkosh)
+* **Aisha Ahmad** - *Javascript management* - [Aisha Ahmad](https://github.com/aishaprograms/)
+* **Hadi Yousufi** - *Front-end design, Food Info Cards* - [Hadi Yousufi](https://github.com/hadicodes)
+* **Terence Ro** - *Exercise Section* - [Terence Ro](https://github.com/terencero)
+* **Josh Kim** - *Food Recipe Cards* - [Joshua Kim](https://github.com/jimkosh)
